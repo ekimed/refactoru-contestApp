@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	div.container.single 
+
+		for submission in data
+			div.title Video Title: #{submission.title}
+			div.url
+				iframe(width="560" height="315" src="http://www.youtube.com/embed/"+submission.id frameborder="0" allowfullscreen)
+			div.name Video Submitted By: #{submission.name}

@@ -1,0 +1,25 @@
+extends layout
+	
+block content
+	div.container
+		h1 Best Climbing Video
+		div.form-container
+			h3 Enter Video Submission
+			form(method="post" action="#")
+				div.form-group
+					label(for="name") Name 
+					input.form-control(type="text" name="name" id="name" placeholder="Enter name")
+
+				div.form-group
+					label(for="videoUrl") Video
+					input.form-control(type="text" name="videoUrl" id="videoUrl" placeholder="URL to Video")
+
+				div.form-group
+					label(for="title") Video Title 
+					input.form-control(type="text" name="title" id="title" placeholder="Enter video title")
+				input(type="submit")
+
+			p.link
+				a(href="/view") View submissions
+block scripts
+	script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
